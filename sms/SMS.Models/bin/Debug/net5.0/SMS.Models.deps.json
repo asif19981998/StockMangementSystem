@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SMS.Models/1.0.0": {
+        "dependencies": {
+          "SMS.Model.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "SMS.Models.dll": {}
+        }
+      },
+      "SMS.Model.Contracts/1.0.0": {
+        "runtime": {
+          "SMS.Model.Contracts.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SMS.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SMS.Model.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

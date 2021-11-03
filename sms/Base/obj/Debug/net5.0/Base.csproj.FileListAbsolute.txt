@@ -1,0 +1,15 @@
+E:\stock manage viva\sms\Base\obj\Debug\net5.0\Base.GeneratedMSBuildEditorConfig.editorconfig
+E:\stock manage viva\sms\Base\obj\Debug\net5.0\Base.AssemblyInfoInputs.cache
+E:\stock manage viva\sms\Base\obj\Debug\net5.0\Base.AssemblyInfo.cs
+E:\stock manage viva\sms\Base\obj\Debug\net5.0\Base.csproj.CoreCompileInputs.cache
+E:\stock manage viva\sms\Base\obj\Debug\net5.0\Base.csproj.AssemblyReference.cache
+E:\stock manage viva\sms\Base\bin\Debug\net5.0\Base.deps.json
+E:\stock manage viva\sms\Base\bin\Debug\net5.0\Base.dll
+E:\stock manage viva\sms\Base\bin\Debug\net5.0\ref\Base.dll
+E:\stock manage viva\sms\Base\bin\Debug\net5.0\Base.pdb
+E:\stock manage viva\sms\Base\bin\Debug\net5.0\SMS.Model.Contracts.dll
+E:\stock manage viva\sms\Base\bin\Debug\net5.0\SMS.Model.Contracts.pdb
+E:\stock manage viva\sms\Base\obj\Debug\net5.0\Base.csproj.CopyComplete
+E:\stock manage viva\sms\Base\obj\Debug\net5.0\Base.dll
+E:\stock manage viva\sms\Base\obj\Debug\net5.0\ref\Base.dll
+E:\stock manage viva\sms\Base\obj\Debug\net5.0\Base.pdb
