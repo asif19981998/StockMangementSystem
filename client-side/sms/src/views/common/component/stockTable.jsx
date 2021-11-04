@@ -27,7 +27,7 @@ const StockTable = (props) => {
 
         <CardTitle>Stock Details </CardTitle>
         <a style={{marginLeft:"68%"}} class="btn btn-info" onClick={()=>props.setShowTable(false)}>Show Chart Data</a>
-        <a href="https://localhost:44388/api/stock/getReport" target="_blank" class="btn btn-success">Download Pdf</a>
+       
         
      
       </CardHeader>

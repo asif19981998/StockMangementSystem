@@ -324,16 +324,17 @@ export default function EnhancedTable(props) {
                       selected={isItemSelected}
                     >
                       <TableCell 
+                      
                       padding="checkbox"
                       onClick={(event) => handleClick(event, row.name,"")}>
                         <Checkbox
                           checked={isItemSelected}
                           inputProps={{ 'aria-labelledby': labelId }}
                         />
-                      </TableCell>
+                      </TableCell >
                        {props.headCells.map(columns=>(
                         columns.propertyName == "actions" ? 
-                         (<TableCell 
+                         (<TableCell  
                           onClick={(event) => handleClick(event, row.name,columns.propertyName)}
                          align="right">
                        <ButtonGroup variant="text">

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "RdlcReport/1.0.0": {
+        "runtime": {
+          "RdlcReport.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RdlcReport/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -24,6 +24,8 @@ namespace SMS.Repositories.EntityRepo
             return _db.Stocks
                 .Include(stock => stock.Product)
                 .Include(stock => stock.Upazila)
+                .Include(stock => stock.Upazila.District)
+                .Include(stock => stock.Upazila.District.Divison)
                 .ToList();
 
 
@@ -67,6 +69,8 @@ namespace SMS.Repositories.EntityRepo
            var stockList =  _db.Stocks
                 .Include(stock => stock.Product)
                 .Include(stock => stock.Upazila)
+                .Include(stock => stock.Upazila.District)
+                .Include(stock => stock.Upazila.District.Divison)
                 .ToList();
             int index = 1;
             foreach (var item in stockList)

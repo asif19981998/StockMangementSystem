@@ -20,10 +20,13 @@ const config = {
 
 export default {
 
-    stock(url = baseUrl + 'state/') {
+    stockHttp(url = baseUrl + 'stock/') {
         return {
             fetchAll: () => axios.get(url+"Get/",config),
             fetchById: id => axios.get(url + id),
+            fetchByDistritId: id => axios.get(url+"SearchByDistrictId/" + id),
+            fetchByDivisonId: id => axios.get(url+"SearchByDivisonId/" + id),
+            fetchByUpazilaId: id => axios.get(url+"SearchByUpazilaId/" + id),
             create: newRecord =>axios.post(url+"create/", newRecord),
             update: (id, updateRecord) => axios.put(url+"update/", updateRecord),
             delete: id => axios.delete(url+"PermanentDeleteById/" + id)

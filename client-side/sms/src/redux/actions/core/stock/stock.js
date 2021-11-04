@@ -1,6 +1,6 @@
 import * as baseActions from "../../base/baseActions/baseActions"
-import baseApi from "../../../actions/base/baseActions/baseApi"
-
+import stockApi from "./stockApi";
+import { dataFetched,dataAdded,dataUpdated,dataDeleted } from "../../base/actionCreator";
 export const ACTION_TYPES = {
     CREATE: "CREATE_STOCK",
     UPDATE: "UPDATE_STOCK",
@@ -30,17 +30,42 @@ export const fetchAll = () => (dispatch) => {
      baseActions.Delete(apiController,id,onSuccess,ACTION_TYPES.DELETE,dispatch)
    };
 
-//    export const fetchAllStock=(dispatch)=>{
-//      (baseApi
-//         .baseHttp("stock/") 
-//         .fetchAll()
-//         .then((response) => {
-//           console.log(response.data)
-//           dispatch(dataFetched(actionType,response.data));
-//          })
-//         .catch((err) => console.log(err) + "error")
-//         )
-//    }
+   export const fetchByDistrictId = (id) => (dispatch) =>{
+    stockApi
+    .stockHttp()
+    .fetchByDistritId(id)
+    .then((response) => {
+      console.log(response.data)
+      dispatch(dataFetched(ACTION_TYPES.FETCH_ALL,response.data));
+     })
+    .catch((err) => console.log(err) + "error")
+   }
+   export const fetchByUpazilaId = (id) => (dispatch) =>{
+    stockApi
+    .stockHttp()
+    .fetchByUpazilaId(id)
+    .then((response) => {
+      console.log(response.data)
+      dispatch(dataFetched(ACTION_TYPES.FETCH_ALL,response.data));
+     })
+    .catch((err) => console.log(err) + "error")
+   }
+
+   export const fetchByDivisonId = (id) => (dispatch) =>{
+    stockApi
+    .stockHttp()
+    .fetchByDivisonId(id)
+    .then((response) => {
+      console.log(response.data)
+      dispatch(dataFetched(ACTION_TYPES.FETCH_ALL,response.data));
+     })
+    .catch((err) => console.log(err) + "error")
+   }
+
+ 
+
+
+
   
   
   

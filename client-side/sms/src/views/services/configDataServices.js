@@ -1,10 +1,7 @@
 import {apiUrl} from "../../configs/config.json"
 import axios from "axios";
 function getDivison (){
-    axios.get(apiUrl+"divison/").then(response=>{
-        return response.data;
-    })
-    return "No data";
+    return axios.get(apiUrl+"divison/")
 }
 
 function getDistrict (){

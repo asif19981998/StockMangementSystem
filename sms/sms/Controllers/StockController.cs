@@ -37,6 +37,24 @@ namespace sms.Controllers
             
             return data;
         }
+        [HttpGet("SearchByDistrictId/{id}")]
+        public ICollection<Stock> SearchByDistrictId(long id)
+        {
+            var data = _service.GetAll().Where(stock=>stock.Upazila.DistrictId == id).ToList();
+            return data;
+        }
+        [HttpGet("SearchByDivisonId/{id}")]
+        public ICollection<Stock> SearchByDivisonId(long id)
+        {
+            var data = _service.GetAll().Where(stock => stock.Upazila.District.DivisonId == id).ToList();
+            return data;
+        }
+        [HttpGet("SearchByUpazilaId/{id}")]
+        public ICollection<Stock> SearchByUpazilaId(long id)
+        {
+            var data = _service.GetAll().Where(stock => stock.UpazilaId == id).ToList();
+            return data;
+        }
 
         [HttpGet("GetChartData")]
         public IEnumerable<dynamic> GetChartData()
