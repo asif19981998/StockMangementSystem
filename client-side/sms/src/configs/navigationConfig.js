@@ -1,7 +1,15 @@
 import React from "react"
 import * as Icon from "react-feather"
 const navigationConfig = [
+  {
+    id:"dashBoard",
+    title:"DashBoard",
+    type:"item",
+    icon: <Icon.Box size={20} />,
+    permissions: ["admin", "editor"],
+    navLink: "/"
 
+  },
 
 {
   id:"product",

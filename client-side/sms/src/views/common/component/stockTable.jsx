@@ -44,7 +44,7 @@ const StockTable = (props) => {
    </tr>
  </thead>
  <tbody>
-   
+    
     {props.data.map(stock=>(
       <tr>
       <td>{stock.product?.name ?? "N/A"}</td>

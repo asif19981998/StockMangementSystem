@@ -17,6 +17,7 @@ import { connect } from "react-redux";
 import {getStockData} from "../../services/configDataServices"
 import StockTable from "../../common/component/stockTable"
 import StockService from "../../services/stockService";
+import NoDataFound from "../../common/component/noDataFound";
    const stockService = new StockService();
 function StockBarChart(props) {
     const [stockData,setStockData]=useState([])
@@ -73,9 +74,9 @@ function StockBarChart(props) {
   }
    
         return (
-            <Paper>
-     
-        <Chart
+           <Paper>
+        {chartData.length == 0 && <NoDataFound></NoDataFound>}
+       {!chartData.length == 0 &&   <Chart
           data={chartData}
         >
           <ArgumentAxis />
@@ -87,7 +88,8 @@ function StockBarChart(props) {
           <EventTracker onClick={clickbarChart}/>
           <Tooltip targetItem={targetItem} onTargetItemChange={changeTargetItem}/>
           
-        </Chart>
+        </Chart>} 
+     
         
       </Paper>
         )

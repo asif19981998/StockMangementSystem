@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { useToasts } from "react-toast-notifications";
 
 import EnhancedTable from "../../../common/component/table";
-
+import NoDataFound from "../../../common/component/noDataFound";
 const styles = theme => ({
   root: {
     "& .MuiTableCell-head": {
@@ -61,6 +61,9 @@ const ProductList = ({ classes, ...props }) => {
   };
 
   return (
+ <>
+    {props.productList.length==0 && <NoDataFound></NoDataFound>}
+    {!props.productList.length==0 &&  
     <div elevation={3}>
       <div className="row">
        <EnhancedTable 
@@ -72,7 +75,10 @@ const ProductList = ({ classes, ...props }) => {
          setCurrentId={setCurrentId}
          createForm="/productCreate"/>
       </div>
-    </div>
+    </div>}
+   
+
+    </>
   
   
   );
