@@ -14,5 +14,6 @@ namespace SMS.Repositories.Abastractions.IEntity
     {
         ICollection<Stock> GetChartData();
         DataTable GetReportData();
+        ICollection<Stock> GetDataByUpazilaId(long id);
     }
 }

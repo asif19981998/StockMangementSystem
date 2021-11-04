@@ -13,5 +13,6 @@ namespace SMS.BLL.Contracts.IEntityService
     {
         ICollection<Stock> GetChartData();
         DataTable GetReportData();
+        ICollection<Stock> GetDataByUpazilaId(long id);
     }
 }

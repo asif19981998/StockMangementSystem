@@ -46,6 +46,14 @@ namespace SMS.Repositories.EntityRepo
 
         }
 
+        public ICollection<Stock> GetDataByUpazilaId(long id)
+        {
+            return _db.Stocks.Where(stock => stock.UpazilaId == id)
+                .Include(stock => stock.Product)
+                .Include(stock => stock.Upazila)
+                .ToList();
+        }
+
         public DataTable GetReportData()
         {
             var dt = new DataTable();
@@ -60,16 +68,18 @@ namespace SMS.Repositories.EntityRepo
                 .Include(stock => stock.Product)
                 .Include(stock => stock.Upazila)
                 .ToList();
+            int index = 1;
             foreach (var item in stockList)
             {
                 row = dt.NewRow();
-                row["Id"] = item.Id;
+                row["Id"] = index;
                 row["ProductName"] = item.Product?.Name;
                 row["Quantity"] = item.Quantity;
                 row["UpazilaName"] = item.Upazila?.Name;
                 row["DistrictName"] = item.Upazila?.District?.Name;
                 row["divisonName"] = item.Upazila?.District?.Divison?.Name;
                 dt.Rows.Add(row);
+                ++index;
 
             }
 

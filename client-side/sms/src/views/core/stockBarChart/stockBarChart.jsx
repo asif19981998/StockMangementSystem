@@ -1,5 +1,6 @@
 
 import React,{useEffect,useState} from "react";
+import axios from "axios"
 import Paper from '@material-ui/core/Paper';
 import {
   ArgumentAxis,
@@ -14,19 +15,15 @@ import {fetchAllStock} from "../../../redux/actions/core/stock/stock";
 import { EventTracker } from '@devexpress/dx-react-chart';
 import { connect } from "react-redux";
 import {getStockData} from "../../services/configDataServices"
+import StockTable from "../../common/component/stockTable"
 import StockService from "../../services/stockService";
    const stockService = new StockService();
 function StockBarChart(props) {
     const [stockData,setStockData]=useState([])
     const [targetItem,setTargetItem]=useState(undefined)
     const [chartData,setChartData]=useState(stockService.data);
-    // var chartData = [];
-    const data = [
-        {quantity: 224, upazilaName: 'Kishoreganj Sadar'},
-        {quantity: 326, upazilaName: 'Bhairab'}
-        
-      ];
-
+    const [upazilaStockData,setUpazilaStockData]=useState([])
+    const [showListData,setShowListData]= useState(false)
       useEffect(()=>{
         props.fetchAllStock()
         //   setStockData(props.stockList)
@@ -34,13 +31,15 @@ function StockBarChart(props) {
        
         getStockData().then(response=>{
             response.data.forEach(element => {
+                console.log(element)
                 var data = {
+                    upazilaId:element.upazilaId,
                     quantity:element.quantity,
                     upazilaName:element.upazila.name
                 }
                  setChartData(chartData.concat(data))
                  console.log(data)
-                 console.log(chartData)
+                 console.log(chartData+"ghghgh")
             });
         })
        
@@ -48,19 +47,30 @@ function StockBarChart(props) {
 
 
       const clickbarChart =(e)=>{
-        console.log(e.targets[0].point)
-        console.log(e)
+        console.log(chartData)
+        var index = e.targets[0].point
+        var id = chartData[index].upazilaId
+        axios.get("https://localhost:44388/api/stock/GetByUpazilaID/"+id).then(response=>{
+
+          setUpazilaStockData(response.data)
+          setShowListData(true)
+        }
+        )
        
       }
       const changeTargetItem=(targetItem)=>{
         setTargetItem(targetItem)
-        console.log(targetItem)
+       
       }
 
       const test=()=>{
           console.log(chartData)
       }
-
+  if(showListData){
+    return(
+      <StockTable data={upazilaStockData} setShowTable={setShowListData}></StockTable>
+    )
+  }
    
         return (
             <Paper>

@@ -9,6 +9,7 @@ export default class StockService  {
             response=>{
                 response.data.forEach(element => {
                     var data = {
+                        upazilaId:element.upazilaId,
                         quantity:element.quantity,
                         upazilaName:element.upazila.name
                     }

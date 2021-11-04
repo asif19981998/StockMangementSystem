@@ -13,9 +13,6 @@ import Product from "../utils/product";
 import useForm from "../utils/useForm";
 import * as actions from "../../../../redux/actions/core/product/product";
 
-
-
-
  const initialFieldValues = new Product();
 
 function ProductCreate({ ...props }) {

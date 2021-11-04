@@ -29,6 +29,11 @@ namespace SMS.BLL.EntityService
 
         }
 
+        public ICollection<Stock> GetDataByUpazilaId(long id)
+        {
+            return _repository.GetDataByUpazilaId(id);
+        }
+
         public DataTable GetReportData()
         {
             return _repository.GetReportData();

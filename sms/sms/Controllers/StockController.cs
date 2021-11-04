@@ -47,14 +47,9 @@ namespace sms.Controllers
         }
 
 
-        // GET api/<StockController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+       
 
-        // POST api/<StockController>
+        
         [HttpPost("Create")]
         public async Task<ActionResult<Stock>> Post(Stock stockModel)
         {
@@ -78,7 +73,7 @@ namespace sms.Controllers
         }
 
 
-        // PUT api/<StockController>/5
+        
         [HttpPut]
         [Route("Update")]
         public async Task<IActionResult> Update(Stock stock)
@@ -94,11 +89,8 @@ namespace sms.Controllers
             }
         }
 
-        // DELETE api/<StockController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+       
+        
         [HttpGet("getReport")]
         public FileContentResult GetReport()
         {
@@ -115,7 +107,15 @@ namespace sms.Controllers
             return File(result.MainStream, "application/pdf");
         }
 
+        [HttpGet]
+        [Route("GetByUpazilaID/{id}")]
+        public ICollection<Stock> GetByUpazilaID(long id)
+        {
+            var data = _service.GetDataByUpazilaId(id);
 
+
+            return data.ToList();
+        }
 
     }
 
