@@ -6,8 +6,9 @@ import {Card,CardHeader,CardTitle,CardBody,FormGroup,Label,Input} from "reactstr
 import { useToasts } from "react-toast-notifications";
 import axios from "axios";
 import EnhancedTable from "../../../common/component/table";
-import {getDistrict,getDivison,getUpazila,getUpazilaByDistrict} from "../../../services/configDataServices"
-import id from "date-fns/locale/id";
+import {getDistrict,getDivison,getUpazila,getUpazilaByDistrict} from "../../../services/configDataServices";
+import NoDataFound from "../../../common/component/noDataFound";
+
 const styles = theme => ({
   root: {
     "& .MuiTableCell-head": {
@@ -85,7 +86,7 @@ const StockList = ({ classes, ...props }) => {
     setPage(0);
   };
 
- 
+
 
   return (
 
@@ -167,7 +168,7 @@ const StockList = ({ classes, ...props }) => {
                       ))}
         </Input>
         </FormGroup>
-        <a href="https://localhost:44388/api/stock/getReport" target="_blank" class="btn btn-success">Export Pdf</a>
+        <a href="https://localhost:44388/api/stock/getReport" target="_blank" class="btn btn-success">Download Pdf</a>
         
      
       </CardHeader>
@@ -178,7 +179,7 @@ const StockList = ({ classes, ...props }) => {
  <thead>
    <tr>
      
-     <th scope="col">Name</th>
+     <th scope="col">Product Name</th>
      <th scope="col">Quantity</th>
      <th scope="col">Upazila</th>
      <th scope="col">District</th>
@@ -186,8 +187,10 @@ const StockList = ({ classes, ...props }) => {
    </tr>
  </thead>
  <tbody>
+
+   {props.stockList.length==0 && <NoDataFound></NoDataFound>}
    
-    {props.stockList.map(stock=>(
+    {!props.stockList.length==0 && props.stockList.map(stock=>(
       <tr>
       <td>{stock.product?.name ?? "N/A"}</td>
       <td>{stock.quantity ?? "N/A"}</td>
