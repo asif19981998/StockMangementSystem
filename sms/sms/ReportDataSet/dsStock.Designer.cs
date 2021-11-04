@@ -287,9 +287,9 @@ namespace sms.ReportDataSet {
             
             private global::System.Data.DataColumn columnUpazilaName;
             
-            private global::System.Data.DataColumn columnDivisonName;
-            
             private global::System.Data.DataColumn columnDistrictName;
+            
+            private global::System.Data.DataColumn columnDivisonName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -358,17 +358,17 @@ namespace sms.ReportDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DivisonNameColumn {
+            public global::System.Data.DataColumn DistrictNameColumn {
                 get {
-                    return this.columnDivisonName;
+                    return this.columnDistrictName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DistrictNameColumn {
+            public global::System.Data.DataColumn DivisonNameColumn {
                 get {
-                    return this.columnDistrictName;
+                    return this.columnDivisonName;
                 }
             }
             
@@ -409,15 +409,15 @@ namespace sms.ReportDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dsStockRow AdddsStockRow(string Id, string ProductName, string Quantity, string UpazilaName, string DivisonName, string DistrictName) {
+            public dsStockRow AdddsStockRow(string Id, string ProductName, string Quantity, string UpazilaName, string DistrictName, string DivisonName) {
                 dsStockRow rowdsStockRow = ((dsStockRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
                         ProductName,
                         Quantity,
                         UpazilaName,
-                        DivisonName,
-                        DistrictName};
+                        DistrictName,
+                        DivisonName};
                 rowdsStockRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdsStockRow);
                 return rowdsStockRow;
@@ -444,8 +444,8 @@ namespace sms.ReportDataSet {
                 this.columnProductName = base.Columns["ProductName"];
                 this.columnQuantity = base.Columns["Quantity"];
                 this.columnUpazilaName = base.Columns["UpazilaName"];
-                this.columnDivisonName = base.Columns["DivisonName"];
                 this.columnDistrictName = base.Columns["DistrictName"];
+                this.columnDivisonName = base.Columns["DivisonName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -459,10 +459,10 @@ namespace sms.ReportDataSet {
                 base.Columns.Add(this.columnQuantity);
                 this.columnUpazilaName = new global::System.Data.DataColumn("UpazilaName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUpazilaName);
-                this.columnDivisonName = new global::System.Data.DataColumn("DivisonName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDivisonName);
                 this.columnDistrictName = new global::System.Data.DataColumn("DistrictName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDistrictName);
+                this.columnDivisonName = new global::System.Data.DataColumn("DivisonName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDivisonName);
                 this.ExtendedProperties.Add("Generator_TablePropName", "_dsStock");
                 this.ExtendedProperties.Add("Generator_UserTableName", "dsStock");
             }
@@ -671,22 +671,6 @@ namespace sms.ReportDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string DivisonName {
-                get {
-                    try {
-                        return ((string)(this[this.tabledsStock.DivisonNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DivisonName\' in table \'dsStock\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledsStock.DivisonNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string DistrictName {
                 get {
                     try {
@@ -698,6 +682,22 @@ namespace sms.ReportDataSet {
                 }
                 set {
                     this[this.tabledsStock.DistrictNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DivisonName {
+                get {
+                    try {
+                        return ((string)(this[this.tabledsStock.DivisonNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DivisonName\' in table \'dsStock\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledsStock.DivisonNameColumn] = value;
                 }
             }
             
@@ -751,18 +751,6 @@ namespace sms.ReportDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDivisonNameNull() {
-                return this.IsNull(this.tabledsStock.DivisonNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDivisonNameNull() {
-                this[this.tabledsStock.DivisonNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDistrictNameNull() {
                 return this.IsNull(this.tabledsStock.DistrictNameColumn);
             }
@@ -771,6 +759,18 @@ namespace sms.ReportDataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDistrictNameNull() {
                 this[this.tabledsStock.DistrictNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDivisonNameNull() {
+                return this.IsNull(this.tabledsStock.DivisonNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDivisonNameNull() {
+                this[this.tabledsStock.DivisonNameColumn] = global::System.Convert.DBNull;
             }
         }
         
