@@ -93,3 +93,17 @@ E:\stock manage viva\sms\sms\bin\Debug\net5.0\SMS.Repositories.pdb
 E:\stock manage viva\sms\sms\bin\Debug\net5.0\SMS.Repositories.Abastractions.pdb
 E:\stock manage viva\sms\sms\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 E:\stock manage viva\sms\sms\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\AspNetCore.Reporting.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\AspNetCore.ReportingServices.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\System.CodeDom.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\System.Data.SqlClient.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\System.ServiceModel.Http.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\System.ServiceModel.Primitives.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\System.ServiceModel.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\runtimes\unix\lib\netstandard2.0\System.Private.ServiceModel.dll
+E:\stock manage viva\sms\sms\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Private.ServiceModel.dll

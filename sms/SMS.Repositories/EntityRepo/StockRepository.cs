@@ -5,6 +5,7 @@ using SMS.Models;
 using SMS.Repositories.Abastractions.IEntity;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,37 @@ namespace SMS.Repositories.EntityRepo
 
         }
 
+        public DataTable GetReportData()
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("Id");
+            dt.Columns.Add("ProductName");
+            dt.Columns.Add("Quantity");
+            dt.Columns.Add("UpazilaName");
+            dt.Columns.Add("DistrictName");
+            dt.Columns.Add("DivisonName");
+            DataRow row;
+           var stockList =  _db.Stocks
+                .Include(stock => stock.Product)
+                .Include(stock => stock.Upazila)
+                .ToList();
+            foreach (var item in stockList)
+            {
+                row = dt.NewRow();
+                row["Id"] = item.Id;
+                row["ProductName"] = item.Product?.Name;
+                row["Quantity"] = item.Quantity;
+                row["UpazilaName"] = item.Upazila?.Name;
+                row["DistrictName"] = item.Upazila?.District?.Name;
+                row["divisonName"] = item.Upazila?.District?.Divison?.Name;
+                dt.Rows.Add(row);
+
+            }
+
+            return dt;
+
+
+        }
     }
     }
 

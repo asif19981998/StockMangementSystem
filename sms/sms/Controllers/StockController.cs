@@ -1,5 +1,6 @@
 ﻿using AmarDaktar.Repositories.Abastractions.IUnitWork;
 using AmarDaktarApp.Controllers;
+using AspNetCore.Reporting;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -7,6 +8,7 @@ using SMS.BLL.Contracts.IEntityService;
 using SMS.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -97,8 +99,23 @@ namespace sms.Controllers
         public void Delete(int id)
         {
         }
+        [HttpGet("getReport")]
+        public FileContentResult GetReport()
+        {
 
-       
+            var dt = _service.GetReportData();
+            string mimeType = "";
+            int extension = 1;
+            var path = Path.Combine(_hostEnvironment.ContentRootPath, "reports", "rpStock.rdlc");
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("prm", "RDLC report (Set as parameter)");
+            LocalReport localReport = new LocalReport(path);
+            localReport.AddDataSource("dsStock", dt);
+            var result = localReport.Execute(RenderType.Pdf, extension, parameters, mimeType);
+            return File(result.MainStream, "application/pdf");
+        }
+
+
 
     }
 

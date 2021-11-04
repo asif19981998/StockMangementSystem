@@ -5,6 +5,7 @@ using SMS.Models;
 using SMS.Repositories.Abastractions.IEntity;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,11 @@ namespace SMS.BLL.EntityService
 
 
 
+        }
+
+        public DataTable GetReportData()
+        {
+            return _repository.GetReportData();
         }
     }
     }

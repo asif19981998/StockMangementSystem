@@ -5,25 +5,27 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sms", "sms\sms.csproj", "{5DC2F170-74B9-415C-ABA0-AD4F25F85801}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.BLL", "SMS.BLL\SMS.BLL.csproj", "{A4A52705-9B0C-4914-9CCB-0BD976F5EAD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.BLL", "SMS.BLL\SMS.BLL.csproj", "{A4A52705-9B0C-4914-9CCB-0BD976F5EAD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.BLL.Contracts", "SMS.BLL.Contracts\SMS.BLL.Contracts.csproj", "{3A62A997-1F81-47A1-940B-FA556485BBFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.BLL.Contracts", "SMS.BLL.Contracts\SMS.BLL.Contracts.csproj", "{3A62A997-1F81-47A1-940B-FA556485BBFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.IoCContainer", "SMS.IoCContainer\SMS.IoCContainer.csproj", "{F0682186-458B-45C5-982F-5702F6730117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.IoCContainer", "SMS.IoCContainer\SMS.IoCContainer.csproj", "{F0682186-458B-45C5-982F-5702F6730117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.DataBaseContext", "SMS.DataBaseContext\SMS.DataBaseContext.csproj", "{7844706B-9315-48BB-9C6B-B033D3011614}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.DataBaseContext", "SMS.DataBaseContext\SMS.DataBaseContext.csproj", "{7844706B-9315-48BB-9C6B-B033D3011614}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Model.Contracts", "SMS.Model.Contracts\SMS.Model.Contracts.csproj", "{4C19D278-BFE3-42F9-8615-849E0E560B7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.Model.Contracts", "SMS.Model.Contracts\SMS.Model.Contracts.csproj", "{4C19D278-BFE3-42F9-8615-849E0E560B7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Models", "SMS.Models\SMS.Models.csproj", "{F330F6A3-0900-4592-9DA9-3E764F3056AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.Models", "SMS.Models\SMS.Models.csproj", "{F330F6A3-0900-4592-9DA9-3E764F3056AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Repositories", "SMS.Repositories\SMS.Repositories.csproj", "{A16D5CF1-34AE-4885-875D-B2F9D13BAE2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.Repositories", "SMS.Repositories\SMS.Repositories.csproj", "{A16D5CF1-34AE-4885-875D-B2F9D13BAE2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Repositories.Abastractions", "SMS.Repositories.Abastractions\SMS.Repositories.Abastractions.csproj", "{34D42634-1F87-4541-A97B-7F9CC860F87B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.Repositories.Abastractions", "SMS.Repositories.Abastractions\SMS.Repositories.Abastractions.csproj", "{34D42634-1F87-4541-A97B-7F9CC860F87B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSBase", "SMSBase\SMSBase.csproj", "{D4734575-FE9B-4F5E-9CDA-36170BB6CE76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMSBase", "SMSBase\SMSBase.csproj", "{D4734575-FE9B-4F5E-9CDA-36170BB6CE76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "Base\Base.csproj", "{28DE7D9C-9FD8-4C53-84F7-61A2F5FEF06D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base", "Base\Base.csproj", "{28DE7D9C-9FD8-4C53-84F7-61A2F5FEF06D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RdlcReport", "RdlcReport\RdlcReport.csproj", "{90A07EE3-FAB3-4B29-8D92-03D3EFCABF41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{28DE7D9C-9FD8-4C53-84F7-61A2F5FEF06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28DE7D9C-9FD8-4C53-84F7-61A2F5FEF06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28DE7D9C-9FD8-4C53-84F7-61A2F5FEF06D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A07EE3-FAB3-4B29-8D92-03D3EFCABF41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A07EE3-FAB3-4B29-8D92-03D3EFCABF41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A07EE3-FAB3-4B29-8D92-03D3EFCABF41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A07EE3-FAB3-4B29-8D92-03D3EFCABF41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
