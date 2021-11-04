@@ -12,7 +12,7 @@ export function fetchAll(controllerName,actionType,dispatch){
     .baseHttp(controllerName) 
     .fetchAll()
     .then((response) => {
-      console.log(response.data)
+    
       dispatch(dataFetched(actionType,response.data));
      })
     .catch((err) => console.log(err) + "error")

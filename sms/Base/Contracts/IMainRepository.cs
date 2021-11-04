@@ -27,5 +27,6 @@ namespace Base.Contracts
 
         bool Remove(T entity,bool isShiftDeleted = false);
         bool RemoveRange(ICollection<T> entities, bool isShiftDeleted = false);
+        bool HardDeleteById(long id);
     }
 }

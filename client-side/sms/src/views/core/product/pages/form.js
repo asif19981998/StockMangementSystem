@@ -48,7 +48,7 @@ function ProductCreate({ ...props }) {
         addToast("Submitted successfully", { appearance: "success" });
       };
       if (currentId == 0 || currentId== null) {
-        console.log(values)
+        
         props.createproduct(values, onSuccess);
       } else {
         console.log(currentId)

@@ -4,9 +4,8 @@ import * as actions from "../../../../redux/actions/core/stock/stock";
 import {  withStyles} from "@material-ui/core";
 import {Card,CardHeader,CardTitle,CardBody,FormGroup,Label,Input} from "reactstrap";
 import { useToasts } from "react-toast-notifications";
-import axios from "axios";
-import EnhancedTable from "../../../common/component/table";
-import {getDistrict,getDivison,getUpazila,getUpazilaByDistrict} from "../../../services/configDataServices";
+
+import {getDistrict,getDivison,getUpazila} from "../../../services/configDataServices";
 import NoDataFound from "../../../common/component/noDataFound";
 
 const styles = theme => ({
@@ -22,8 +21,8 @@ const styles = theme => ({
 })
 
 const StockList = ({ classes, ...props }) => {
-  const [currentId, setCurrentId] = useState(0)
-  const [page, setPage] = React.useState(0);
+ 
+ 
   const [stock,setStock]=useState([]);
   const[districtList,setDistrictList]=useState([]);
   const[upazilaList,setUpazilaList]=useState([])
@@ -64,27 +63,14 @@ const StockList = ({ classes, ...props }) => {
         setUpazilaList(response.data)
       })
      setStock(props.stockList)
-     console.log(props.stockList)
+    
       
     },[stock] )
 
 
   const { addToast } = useToasts()
 
-  const onDelete = id => {
-    console.log(id);
-    if (window.confirm('Are you sure to delete this record?'))
-      props.deleteState(id, () => addToast("Deleted successfully", { appearance: 'info' }))
-  }
 
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
 
 
 

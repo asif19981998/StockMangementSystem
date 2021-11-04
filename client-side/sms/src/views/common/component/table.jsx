@@ -272,8 +272,7 @@ export default function EnhancedTable(props) {
   
  useEffect(()=>{
    setRows(props.rows)
-   console.log("ami maintable")
-   console.log(props.rows)
+  
    
  },[props.rows])
 

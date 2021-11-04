@@ -12,7 +12,7 @@ const useForm = (initialFieldValues, validate, setCurrentId) => {
       ...values,
       ...fieldValue
     })
-    console.log(values)
+    
     validate(fieldValue)
   }
 

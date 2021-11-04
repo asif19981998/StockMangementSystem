@@ -19,7 +19,7 @@ class SidebarHeader extends Component {
           <li className="nav-item mr-auto">
             <NavLink to="/" className="navbar-brand">
               <div className="brand-logo" />
-              <img src={companyLogo} style={{"height":"40px","width":"100px"}} className="brand-text mb-0"></img>
+              Ezzy SMS
             </NavLink>
           </li>
           <li className="nav-item nav-toggle">

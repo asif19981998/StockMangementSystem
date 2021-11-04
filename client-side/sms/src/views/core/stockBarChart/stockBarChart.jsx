@@ -11,7 +11,7 @@ import {
   Tooltip
 } from '@devexpress/dx-react-chart-material-ui';
 import * as actions from "../../../redux/actions/core/stock/stock";
-import {fetchAllStock} from "../../../redux/actions/core/stock/stock";
+
 import { EventTracker } from '@devexpress/dx-react-chart';
 import { connect } from "react-redux";
 import {getStockData} from "../../services/configDataServices"
@@ -20,27 +20,25 @@ import StockService from "../../services/stockService";
 import NoDataFound from "../../common/component/noDataFound";
    const stockService = new StockService();
 function StockBarChart(props) {
-    const [stockData,setStockData]=useState([])
+   
     const [targetItem,setTargetItem]=useState(undefined)
     const [chartData,setChartData]=useState(stockService.data);
     const [upazilaStockData,setUpazilaStockData]=useState([])
     const [showListData,setShowListData]= useState(false)
       useEffect(()=>{
         props.fetchAllStock()
-        //   setStockData(props.stockList)
-        //   console.log(stockData)
+       
        
         getStockData().then(response=>{
             response.data.forEach(element => {
-                console.log(element)
+               
                 var data = {
                     upazilaId:element.upazilaId,
                     quantity:element.quantity,
                     upazilaName:element.upazila.name
                 }
                  setChartData(chartData.concat(data))
-                 console.log(data)
-                 console.log(chartData+"ghghgh")
+                
             });
         })
        
@@ -48,7 +46,7 @@ function StockBarChart(props) {
 
 
       const clickbarChart =(e)=>{
-        console.log(chartData)
+        
         var index = e.targets[0].point
         var id = chartData[index].upazilaId
         axios.get("https://localhost:44388/api/stock/GetByUpazilaID/"+id).then(response=>{
@@ -64,9 +62,7 @@ function StockBarChart(props) {
        
       }
 
-      const test=()=>{
-          console.log(chartData)
-      }
+   
   if(showListData){
     return(
       <StockTable data={upazilaStockData} setShowTable={setShowListData}></StockTable>

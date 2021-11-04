@@ -66,6 +66,11 @@ namespace Base.Services
         {
             return _repository.Remove(entity, false);
         }
+        public bool HardDeleteById(long id)
+        {
+          return  _repository.HardDeleteById(id);
+            
+        }
 
         public virtual bool RemoveRange(ICollection<T> entities, bool isShiftDeleted = false)
         {

@@ -13,7 +13,7 @@ import Stock from "../utils/stock";
 import useForm from "../../../common/file/useForm";
 import * as actions from "../../../../redux/actions/core/stock/stock";
 import * as productActions from "../../../../redux/actions/core/product/product";
-import {getDistrict,getDivison,getUpazila,getUpazilaByDistrict} from "../../../services/configDataServices"
+import {getDistrict,getUpazilaByDistrict} from "../../../services/configDataServices"
 
 
 const initialFieldValues = new Stock();
@@ -39,7 +39,7 @@ function StockCreate({ ...props }) {
     const getUpazilaBaseOnDistrict=(e)=>{
       
       getUpazilaByDistrict(e.target.value).then(response=>{
-        console.log(response)
+       
         setUpazilaList(response.data)
       })
      }
@@ -59,11 +59,11 @@ function StockCreate({ ...props }) {
        
 
        var newData =  {...initialFieldValues,...values}
-       console.log(newData)
+      
         props.createStock(newData, onSuccess);
       } else {
        
-        console.log("call update in create");
+        
         props.updateStock(currentId, values, onSuccess);
       }
     }

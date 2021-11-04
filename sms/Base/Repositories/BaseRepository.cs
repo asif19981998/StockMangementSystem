@@ -154,8 +154,14 @@ namespace Base.Repositories
             
             
         }
+        public bool HardDeleteById(long id)
+        {
+           var entity =  Table.FirstOrDefault(d => d.Id == id);
+            Table.Remove(entity);
+            return SaveChanges();
+        }
 
-         private bool SaveChanges()
+        private bool SaveChanges()
         {
            
             return _db.SaveChanges() > 0;
@@ -166,5 +172,7 @@ namespace Base.Repositories
             
             return await _db.SaveChangesAsync() > 0;
         }
+
+        
     }
 }

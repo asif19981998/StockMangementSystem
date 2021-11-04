@@ -43,7 +43,7 @@ const ThemeNavbar = props => {
      
         <div className="navbar-wrapper">
           <div className="navbar-container content">
-            <div
+            {/* <div
               className="navbar-collapse d-flex justify-content-between align-items-center"
               id="navbar-mobile"
             >
@@ -72,7 +72,7 @@ const ThemeNavbar = props => {
                 logoutWithJWT={props.logoutWithJWT}
                 logoutWithFirebase={props.logoutWithFirebase}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </Navbar>

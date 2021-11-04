@@ -75,13 +75,22 @@ namespace sms.Controllers
             }
         }
 
-        // DELETE api/<ProductController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpPost]
+        [Route("DeleteById/{id}")]
+        public string HardDeleteById(long id)
         {
+            try
+            {
+                var result =  _service.HardDeleteById(id);
+                return "Successfully Deleted";
+            }
+            catch (Exception ex)
+            {
+                return "Get Error";
+            }
         }
 
-       
+
 
     }
 
