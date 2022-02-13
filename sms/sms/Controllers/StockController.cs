@@ -86,7 +86,11 @@ namespace sms.Controllers
             
             
             if (isSubmitterd)
+            {
+                GetChartData();
                 return stockModel;
+            }
+               
             return Ok("Not Saved");
         }
 

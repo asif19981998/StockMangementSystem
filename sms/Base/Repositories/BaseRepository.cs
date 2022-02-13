@@ -58,7 +58,7 @@ namespace Base.Repositories
 
         public virtual ICollection<T> GetAll()
         {
-            return Table.ToList();
+            return Table.OrderByDescending(data=>data.Id).ToList();
         }
 
         public virtual async Task<ICollection<T>> GetAllAsync()

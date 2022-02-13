@@ -27,16 +27,16 @@ namespace SMS.Repositories.EntityRepo
                 .Include(stock => stock.Upazila.District)
                 .Include(stock => stock.Upazila.District.Divison)
                 .ToList();
-
-
-        }
+ }
         public ICollection<Stock> GetChartData()
         {
             List<Stock> result = _db.Stocks
                  .Include(stock => stock.Upazila)
                  .ToList()
                 .GroupBy(x => x.UpazilaId)
-                .Select(st => new Stock
+                
+                .Select(st =>
+                 new Stock
                 {
                     UpazilaId = st.First().UpazilaId,
                     Upazila = st.First().Upazila,

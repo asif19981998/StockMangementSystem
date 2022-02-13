@@ -14,7 +14,7 @@ import useForm from "../../../common/file/useForm";
 import * as actions from "../../../../redux/actions/core/stock/stock";
 import * as productActions from "../../../../redux/actions/core/product/product";
 import {getDistrict,getUpazilaByDistrict} from "../../../services/configDataServices"
-
+import StockService from "../../../services/stockService";
 
 const initialFieldValues = new Stock();
 
@@ -52,6 +52,7 @@ function StockCreate({ ...props }) {
           localStorage.removeItem("currentId")
           setShowList(true)
          }
+        new StockService();
         resetForm();
         addToast("Submitted successfully", { appearance: "success" });
       };

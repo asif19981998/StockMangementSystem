@@ -74,6 +74,22 @@ namespace SMS.DataBaseContext.Migrations
                             DivisonId = 1L,
                             IsDeleted = false,
                             Name = "Manikganj"
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            Code = "004Di",
+                            DivisonId = 2L,
+                            IsDeleted = false,
+                            Name = "Jessore"
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            Code = "005Di",
+                            DivisonId = 2L,
+                            IsDeleted = false,
+                            Name = "Narail"
                         });
                 });
 
@@ -316,6 +332,30 @@ namespace SMS.DataBaseContext.Migrations
                             DistrictId = 1L,
                             IsDeleted = false,
                             Name = "Nikli"
+                        },
+                        new
+                        {
+                            Id = 14L,
+                            Code = "0014U",
+                            DistrictId = 4L,
+                            IsDeleted = false,
+                            Name = "Lohagara"
+                        },
+                        new
+                        {
+                            Id = 15L,
+                            Code = "0014U",
+                            DistrictId = 5L,
+                            IsDeleted = false,
+                            Name = "Jigorgacha"
+                        },
+                        new
+                        {
+                            Id = 16L,
+                            Code = "0016U",
+                            DistrictId = 4L,
+                            IsDeleted = false,
+                            Name = "Kalia"
                         });
                 });
 

@@ -15,15 +15,15 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Z-Desk,
+            Ezzy Stock Mangement System
           </a>
         </span>
         <span className="float-md-right d-none d-md-block">
           <span className="align-middle">Powered by </span>{" "}
-          <a href="www.encodersit.com">Encoders IT</a>
+          <a href="www.encodersit.com">Rakibul Huda Asif</a>
         </span>
       </p>
-      <ScrollToTop showUnder={160}>*/}
+      <ScrollToTop showUnder={160}>
         <Button color="primary" className="btn-icon scroll-top">
           <ArrowUp size={15} />
         </Button>
