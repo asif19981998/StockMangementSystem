@@ -4,6 +4,7 @@ using SMS.DataBaseContext;
 using SMS.Models;
 using SMS.Repositories.Abastractions.IEntity;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -42,6 +43,17 @@ namespace SMS.Repositories.EntityRepo
                     Upazila = st.First().Upazila,
                     Quantity = st.Sum(q => q.Quantity)
                 }).ToList();
+
+            //IQueryAble
+            IQueryable a = _db.Stocks.AsQueryable();
+
+            //IEnumerable
+            IEnumerable ie = _db.Stocks.AsEnumerable();
+
+            //distinct
+            IQueryable dis = _db.Districts.Distinct().Select(s=>s.Name);
+
+            var groupByData = _db.Districts.GroupBy(d => d.Name);
 
             return result;
 
